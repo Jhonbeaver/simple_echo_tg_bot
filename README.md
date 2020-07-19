@@ -1,1 +1,7 @@
-# simple_echo_tg_bot
+# Простой echo бот 
+
+## .env
+
+```
+BOT_TOKEN= токена бота 
+```
