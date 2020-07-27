@@ -6,6 +6,6 @@ services:
     container_name: geekninja-sockets
     restart: always
     ports:
-      - "4459:3000"
+      - "4459:5000"
     command:
       "npm run start"
