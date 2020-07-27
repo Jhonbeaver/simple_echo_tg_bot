@@ -2,10 +2,12 @@ require('dotenv').config()
 var cors = require('cors')
 const app = require('express')();
 const server = require('http').createServer(app);
-var io = require('socket.io')(server);
+
 io.set('origins', 'https://geekninja.ru');
 const { Telegraf } = require('telegraf')
 app.use(cors())
+
+var io = require('socket.io')(server);
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
@@ -15,7 +17,9 @@ bot.on('message', (ctx) => {
     }
 })
 
-io.on('connection', socket => { /* ... */ });
+io.on('connection', socket => {
+    console.log('Connected!')
+});
 
 server.listen(3000, function () {
     console.log('Example app listening on port 3000!');
