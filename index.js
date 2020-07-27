@@ -1,5 +1,6 @@
 require('dotenv').config()
 var io = require('socket.io')(5000);
+io.origins('*:*')
 const { Telegraf } = require('telegraf')
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
