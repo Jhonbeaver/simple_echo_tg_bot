@@ -2,8 +2,6 @@ require('dotenv').config()
 var cors = require('cors')
 const app = require('express')();
 const server = require('http').createServer(app);
-
-io.set('origins', 'https://geekninja.ru');
 const { Telegraf } = require('telegraf')
 app.use(cors())
 
