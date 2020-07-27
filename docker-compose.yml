@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  geekdevmailer:
+    build: ./
+    container_name: geekninja-new
+    restart: always
+    ports:
+      - "4459:3000"
+    command:
+      "npm run start"

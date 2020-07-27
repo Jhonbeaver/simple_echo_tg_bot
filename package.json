@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "socket.io": "^2.3.0",
     "telegraf": "^3.38.0"
   }
 }

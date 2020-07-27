@@ -1,8 +1,13 @@
 require('dotenv').config()
+var io = require('socket.io')(5000);
 const { Telegraf } = require('telegraf')
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
-bot.on('message', (ctx) => ctx.reply(ctx.message.text))
+bot.on('message', (ctx) => {
+    if (ctx.message.chat.id == '-1001130603069') {
+        io.emit('chatmessage', `${ctx.message.from.username}: ${ctx.message.text}`);
+    }
+})
 
 bot.launch()
