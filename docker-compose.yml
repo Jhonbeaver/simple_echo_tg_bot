@@ -1,9 +1,9 @@
 version: "3"
 
 services:
-  geekdevmailer:
+  geeksockets:
     build: ./
-    container_name: geekninja-new
+    container_name: geekninja-sockets
     restart: always
     ports:
       - "4459:3000"
